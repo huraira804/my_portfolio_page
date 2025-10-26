@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Huraira | Portfolio</title>
+  <style>
+    /* ====== RESET ====== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #fff;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    /* ====== HEADER ====== */
+    header {
+      text-align: center;
+      padding: 100px 20px;
+      background: transparent;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      color: #00ffff;
+      text-shadow: 0 0 20px #00ffff, 0 0 40px #ff00ff;
+      animation: glow 2.5s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 20px #00ffff; }
+      to { text-shadow: 0 0 40px #ff00ff, 0 0 60px #00ffff; }
+    }
+
+    header p {
+      margin-top: 15px;
+      color: #ccc;
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+    }
+
+    /* ====== ABOUT ====== */
+    .about {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .about-box {
+      max-width: 700px;
+      margin: auto;
+      background: rgba(255,255,255,0.05);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px #00ffff50;
+      border: 2px solid transparent;
+      animation: borderChange 3s infinite alternate;
+      backdrop-filter: blur(10px);
+    }
+
+    @keyframes borderChange {
+      from { border-color: #00ffff; }
+      to { border-color: #ff00ff; }
+    }
+
+    .about-box img {
+      width: 140px;
+      border-radius: 50%;
+      border: 3px solid #00ffff;
+      box-shadow: 0 0 25px #00ffff;
+      transition: transform 0.4s;
+    }
+
+    .about-box img:hover {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .about-box h2 {
+      margin-top: 20px;
+      color: #ff00ff;
+      font-size: 2rem;
+      text-shadow: 0 0 15px #ff00ff;
+    }
+
+    .about-box p {
+      color: #ddd;
+      margin-top: 15px;
+      line-height: 1.8;
+      font-size: 1.1rem;
+    }
+
+    /* ====== PROJECTS ====== */
+    .projects {
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .projects h2 {
+      font-size: 2.5rem;
+      color: #00ffff;
+      text-shadow: 0 0 15px #00ffff;
+      margin-bottom: 40px;
+    }
+
+    .project-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .card {
+      width: 250px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 0 20px #ff00ff40;
+      border: 2px solid #00ffff;
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 30px #00ffff80;
+      border-color: #ff00ff;
+    }
+
+    .card h3 {
+      color: #00ffff;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #ccc;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* ====== CONTACT ====== */
+    .contact {
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(135deg, #1a0033, #000);
+    }
+
+    .contact h2 {
+      color: #ff00ff;
+      text-shadow: 0 0 20px #ff00ff;
+      font-size: 2.5rem;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      border: 2px solid #00ffff;
+      border-radius: 30px;
+      color: #00ffff;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+
+    .contact a:hover {
+      background: #00ffff;
+      color: #000;
+      box-shadow: 0 0 25px #00ffff;
+    }
+
+    /* ====== FOOTER ====== */
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #000;
+      font-size: 0.9rem;
+      color: #888;
+      border-top: 1px solid #222;
+    }
+
+    /* ====== ANIMATED BACKGROUND ====== */
+    body::before {
+      content: "";
+      position: fixed;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, #00ffff20 10%, transparent 10%) repeat;
+      background-size: 80px 80px;
+      top: 0;
+      left: 0;
+      animation: moveBg 15s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes moveBg {
+      from { transform: translate(0, 0); }
+      to { transform: translate(-80px, -80px); }
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+    <h1>Huraira Editz</h1>
+    <p>Future Full Stack Developer • Video Editor</p>
+  </header>
+
+  <section class="about">
+    <div class="about-box">
+      <img src="logo.png" alt="Huraira">
+      <h2>About Me</h2>
+      <p>
+        Hey there! My name is <strong>Huraira</strong>, and I am currently serving as a social media editor for <b>PTI</b>. I manage and edit digital content to help engage audiences and spread the party’s message effectively. Alongside my editing work, I am passionately learning and working towards becoming a <b>full stack web developer</b>. I am deeply interested in both the creative and technical sides of web development — from designing beautiful user interfaces to building powerful back-end systems. My goal is to combine my editing skills with my future coding expertise to create impactful digital platforms and projects.
+    </div>
+  </section>
+
+  <section class="projects">
+    <h2>My Projects</h2>
+    <div class="project-grid">
+      <div class="card">
+        <h3>Crazy Portfolio</h3>
+        <p>My personal glowing and animated portfolio built with HTML & CSS.</p>
+      </div>
+      <div class="card">
+        <h3>Video Edits</h3>
+        <p>Creative motion edits made using <b>Alight Motion</b> and <b>After Effects</b>.</p>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Let's Connect</h2>
+    <a href="mailto:hurairaxedits@gmail.com">Contact Me</a>
+  </section>
+
+  <footer>
+    © 2025 Huraira Editz | Built with ❤️ using HTML + CSS
+  </footer>
+
+</body>
+</html>
